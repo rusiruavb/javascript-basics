@@ -1,9 +1,9 @@
-import { TopicPage } from '../../components/TopicPage';
-import { CodeExample } from '../../components/CodeExample';
-import { InfoBox } from '../../components/InfoBox';
-import { ComparisonTable } from '../../components/ComparisonTable';
-import { QuickReference } from '../../components/QuickReference';
-import { MistakeExample } from '../../components/MistakeExample';
+import { TopicPage } from "../../components/TopicPage";
+import { CodeExample } from "../../components/CodeExample";
+import { InfoBox } from "../../components/InfoBox";
+import { ComparisonTable } from "../../components/ComparisonTable";
+import { QuickReference } from "../../components/QuickReference";
+import { MistakeExample } from "../../components/MistakeExample";
 
 export const Functions = () => {
   return (
@@ -14,32 +14,38 @@ export const Functions = () => {
     >
       <section className="space-y-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">What are Functions?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            What are Functions?
+          </h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Functions are reusable blocks of code that perform specific tasks. They're like recipes - you define them
-            once and use them many times. React components are essentially functions that return UI!
+            Functions are reusable blocks of code that perform specific tasks.
+            They're like recipes - you define them once and use them many times.
+            React components are essentially functions that return UI!
           </p>
         </div>
 
         <InfoBox type="react" title="Why This Matters for React">
-          Modern React uses function components almost exclusively. Arrow functions are the standard for event handlers
-          and callbacks. Understanding function syntax and 'this' binding is essential.
+          Modern React uses function components almost exclusively. Arrow
+          functions are the standard for event handlers and callbacks.
+          Understanding function syntax and 'this' binding is essential.
         </InfoBox>
 
         <div>
           <ComparisonTable
             title="Function Types Comparison"
-            columns={['Type', 'Syntax', 'this Binding', 'Use in React']}
+            columns={["Type", "Syntax", "Use in React"]}
             rows={[
-              ['Declaration', 'function name() {}', 'Dynamic', 'Older style'],
-              ['Expression', 'const name = function() {}', 'Dynamic', 'Rarely used'],
-              ['Arrow', 'const name = () => {}', 'Lexical', '✅ Standard'],
+              ["Declaration", "function name() {}", "Older style"],
+              ["Expression", "const name = function() {}", "Rarely used"],
+              ["Arrow", "const name = () => {}", "✅ Standard"],
             ]}
           />
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Function Declaration</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Function Declaration
+          </h2>
 
           <CodeExample
             title="Example 1: Basic Function Declaration"
@@ -74,7 +80,9 @@ console.log('5 × 3 =', multiply(5, 3));`}
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Arrow Functions</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Arrow Functions
+          </h2>
 
           <CodeExample
             title="Example 3: Basic Arrow Function"
@@ -128,7 +136,9 @@ console.log(makePerson('Alice', 25));`}
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">React Event Handler Patterns</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            React Event Handler Patterns
+          </h2>
 
           <CodeExample
             title="Example 6: Event Handlers in React"
@@ -174,7 +184,9 @@ console.log('List:', listItems);`}
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Default Parameters</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Default Parameters
+          </h2>
 
           <CodeExample
             title="Example 8: Default Parameter Values"
@@ -191,7 +203,9 @@ console.log(greet('Bob', 'Hi'));`}
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Common Mistakes</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Common Mistakes
+          </h2>
 
           <MistakeExample
             wrongLabel="Forgetting Return in Block"
@@ -247,13 +261,13 @@ const handleClick = () => {
 
         <QuickReference
           items={[
-            'Use arrow functions (() => {}) as the default in modern React',
-            'Implicit return: single expression without braces returns automatically',
+            "Use arrow functions (() => {}) as the default in modern React",
+            "Implicit return: single expression without braces returns automatically",
             'Arrow functions inherit "this" from surrounding context (lexical binding)',
-            'Use arrow functions for event handlers and array methods',
-            'Wrap returned objects in parentheses: () => ({ key: value })',
+            "Use arrow functions for event handlers and array methods",
+            "Wrap returned objects in parentheses: () => ({ key: value })",
             'Default parameters: (name = "default") => ...',
-            'One parameter can omit parentheses: x => x * 2',
+            "One parameter can omit parentheses: x => x * 2",
           ]}
         />
 
