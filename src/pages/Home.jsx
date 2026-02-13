@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { topics } from '../data/topics';
-import { useProgress } from '../contexts/ProgressContext';
+import { Link } from "react-router-dom";
+import { topics } from "../data/topics";
+import { useProgress } from "../contexts/ProgressContext";
 
 export const Home = () => {
   const { isTopicComplete } = useProgress();
@@ -12,8 +12,19 @@ export const Home = () => {
           JavaScript for React Developers
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Master the essential JavaScript concepts you need before diving into React development
+          Master the essential JavaScript concepts you need before diving into
+          React development
         </p>
+        <h3 className="text-2xl md:text-2xl mt-8 font-bold text-gray-900 dark:text-white mb-4">
+          Download the Code Board examples{" "}
+          <a
+            href="https://github.com/rusiruavb/code-board"
+            className="text-blue-500 underline"
+            target="_blank"
+          >
+            here
+          </a>
+        </h3>
       </div>
 
       <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
@@ -23,7 +34,9 @@ export const Home = () => {
             <span className="text-2xl">✨</span>
             <div>
               <h3 className="font-semibold">Modern JavaScript</h3>
-              <p className="text-blue-100">ES6+ features used in React applications</p>
+              <p className="text-blue-100">
+                ES6+ features used in React applications
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -37,7 +50,9 @@ export const Home = () => {
             <span className="text-2xl">🚀</span>
             <div>
               <h3 className="font-semibold">React-Ready</h3>
-              <p className="text-blue-100">Examples tailored for React development</p>
+              <p className="text-blue-100">
+                Examples tailored for React development
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -51,7 +66,9 @@ export const Home = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Choose Your Topic</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Choose Your Topic
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {topics.map((topic) => {
             const isComplete = isTopicComplete(topic.id);
@@ -63,14 +80,18 @@ export const Home = () => {
               >
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-                    {topic.order.toString().padStart(2, '0')}
+                    {topic.order.toString().padStart(2, "0")}
                   </span>
-                  {isComplete && <span className="text-green-500 text-xl">✓</span>}
+                  {isComplete && (
+                    <span className="text-green-500 text-xl">✓</span>
+                  )}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   {topic.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{topic.description}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {topic.description}
+                </p>
               </Link>
             );
           })}
@@ -78,7 +99,9 @@ export const Home = () => {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">💡 Learning Tips</h3>
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+          💡 Learning Tips
+        </h3>
         <ul className="space-y-2 text-gray-700 dark:text-gray-300">
           <li className="flex items-start gap-2">
             <span className="text-blue-500">•</span>
@@ -90,7 +113,9 @@ export const Home = () => {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-blue-500">•</span>
-            <span>Complete topics in order for the best learning experience</span>
+            <span>
+              Complete topics in order for the best learning experience
+            </span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-blue-500">•</span>
